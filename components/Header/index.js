@@ -60,8 +60,13 @@ const Header = () => {
 
   React.useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        // Clicked outside the dropdown, hide it
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        !navLinks.some((navlink, index) => activeDropdownIndex === index && event.target === document.querySelector(`button[data-dropdown-index="${index}"]`)) &&
+        !event.target.closest('.fixed')
+      ) {
+        // Clicked outside the dropdown or its associated button, hide it
         setActiveDropdownIndex(-1);
       }
     };
