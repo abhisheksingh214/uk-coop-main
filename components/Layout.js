@@ -12,7 +12,7 @@ function Layout(props) {
             </Head>
             <div className='bg-cover bg-center bg-fixed bg-[url("/bg/bglightani.svg")]'>
                 <Header/>
-                <main className="w-full min-h-screen select-none">{props.children}</main>
+                <main className="w-full min-h-screen select-none pt-16">{props.children}</main>
                 <Footer/>
             </div>
         </>
