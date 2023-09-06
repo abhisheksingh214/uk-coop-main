@@ -105,7 +105,7 @@ const Header = () => {
   };
 
   return (
-    <div className={` fixed w-full transition-all duration-200 ${show === 'top' || show === 'show' ? " translate-y-0" : " -translate-y-[80px]"}`}>
+    <div className={` fixed w-full transition-all duration-300 ${show === 'top' || show === 'show' ? " translate-y-0" : " -translate-y-[130px]"}`}>
       {/* Header Top Blue Line */}
       <div className="bg-blue-500">
         <div className="mx-auto flex h-10 max-w-7xl items-center justify-end gap-5 px-4 sm:px-6 lg:px-8">
@@ -179,19 +179,24 @@ const Header = () => {
                   <div className='relative' key={index}>
                     <button
                       onClick={() => toggleDropdown(index)} // Pass the index to identify which button was clicked
-                      className='font-medium text-base'
+                      className='font-medium text-base flex items-center gap-2'
                     >
                       {navlink.title}
+
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-5 h-5 transition-all duration-300 ${activeDropdownIndex !== index ? "":" rotate-180"}`}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                      </svg>
+
                     </button>
                     {/* open click link list */}
                     {activeDropdownIndex === index && (
                       <div
-                        className='absolute top-10 left-0 bg-slate-400 text-white flex flex-col gap-3 w-[200px]'
+                        className='absolute top-10 left-0 shadow-lg bg-white flex flex-col w-[200px]'
                         ref={dropdownRef}
                       >
                         {/* show links on click button */}
                         {navlink.clickOpen.map((link, i) => (
-                          <Link href={link.href} key={i} className='font-medium text-base cursor-pointer'>
+                          <Link href={link.href} key={i} className='font-medium text-base cursor-pointer hover:bg-slate-200 hover:underline p-2'>
                             {link.link}
                           </Link>
                         ))}
