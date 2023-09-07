@@ -33,6 +33,13 @@ const actrules = [
   { link: "Citizen Charter", href: "#" },
 ]
 
+const contactus = [
+  { link: "Co-operative Department", href: "/contact/coopdepartment" },
+  { link: "ARCS Contact", href: "/contact/arcs" },
+  { link: "General Manager/C.E.O", href: "/contact/manager-ceo" },
+  { link: "Apex Bodies", href: "/contact/apex" },
+]
+
 const navLinks = [
   { title: "Home", clickOpen: null, href: "/" },
   { title: "About Us", clickOpen: aboutus, href: null },
@@ -42,6 +49,7 @@ const navLinks = [
   { title: "Axt & Rules", clickOpen: actrules, href: null },
   { title: "RTI", clickOpen: null, href: "#" },
   { title: "Gallery", clickOpen: null, href: "#" },
+  { title: "Contact Us", clickOpen: contactus, href: null },
 ]
 
 const Header = () => {
@@ -100,7 +108,7 @@ const Header = () => {
   }, []);
 
   const controlNavbar = () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 160) {
       if (window.scrollY > lastScrollY) {
         setShow("hide");
       } else {
@@ -122,7 +130,7 @@ const Header = () => {
 
 
   return (
-    <div className={`fixed w-full transition-all duration-300 ${show === 'top' || show === 'show' ? " translate-y-0" : " -translate-y-[130px]"}`}>
+    <div className={`fixed w-full transition-all duration-300 ${show === 'top' || show === 'show' ? " translate-y-0" : " -translate-y-[140px] sm:-translate-y-[140px]"}`}>
       {/* Header Top Blue Line */}
       <div className="bg-blue-500">
         <div className="mx-auto flex h-10 max-w-7xl items-center justify-end gap-5 px-4 sm:px-6 lg:px-8">
@@ -182,7 +190,7 @@ const Header = () => {
 
 
       {/* desktop view */}
-      <div className='hidden lg:block'>
+      <div className='hidden lg:block backdrop-blur-md'>
         {/* navlinks */}
         <div className='flex items-center gap-2 sm:gap-3 md:gap-8 p-2 w-full xs:w-11/12 mx-auto'>
           {
