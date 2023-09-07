@@ -8,7 +8,7 @@ const ResponsiveTable = ({ body, head }) => {
                     <tr>
                         {head.map((content, index) => {
                             return (
-                                <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">
+                                <th key={index} scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">
                                     {content}
                                 </th>
                             )
