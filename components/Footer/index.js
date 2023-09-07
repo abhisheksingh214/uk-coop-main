@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className={`w-full shadow bg-lightgray text-[#252F40] py-5 xs:mb-[2rem] md:mb-0`}>
+    <footer className={`w-full shadow bg-lightgray text-[#252F40] py-5 md:mb-0`}>
       <div className='flex flex-col items-center justify-center gap-4'>
         <div className='p-4 mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:gap-4'>
           <div className='flex flex-col h-full justify-center'>
@@ -90,7 +90,7 @@ const Footer = () => {
 
         </div>
         <div>
-          <div className='flex sm:flex-row xs:flex-col justify-center items-center gap-5'>
+          <div className='flex sm:flex-row xs:flex-col justify-center items-center gap-5 p-3'>
             <p className=' font-light tracking-wider xs:text-center'>All rights reserved. Copyright © 2023 Co-Operative department of Uttrakhand System by <span className=' font-normal'>NIC</span></p>
           </div>
         </div>
