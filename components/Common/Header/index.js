@@ -4,8 +4,8 @@ import React from 'react'
 const aboutus = [
   { link: "Aim", href: "#" },
   { link: "Department Structure", href: "#" },
-  { link: "History", href: "#" },
-  { link: "Organization Structure", href: "#" },
+  { link: "History&Obj", href: "/about/history-obj" },
+  { link: "Organization Structure", href: "/about/organisation-department" },
   { link: "Citizen Charter", href: "#" },
 ]
 
